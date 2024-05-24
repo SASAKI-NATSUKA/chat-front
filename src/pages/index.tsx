@@ -27,7 +27,7 @@ export default function Home() {
 
   useEffect(() => {
     const getAllMessages = async () => {
-      const res = await fetch("https://nq0lswhe90.execute-api.us-east-1.amazonaws.com/production");
+      const res = await fetch("https://oagko1hjb5.execute-api.us-east-1.amazonaws.com/production");
       const resJson: Response = await res.json();
 
       setMessages(JSON.parse(resJson.body).messages);
@@ -35,7 +35,7 @@ export default function Home() {
 
     getAllMessages();
 
-    const socket = new WebSocket("wss://tiz5e5z4c0.execute-api.us-east-1.amazonaws.com/production/");
+    const socket = new WebSocket("wss://iv6h14y7n2.execute-api.us-east-1.amazonaws.com/production/");
 
     setSocket(socket);
 
